@@ -1,0 +1,31 @@
+<ol class="breadcrumb">
+	<li class="active"><a href="#/overview">Home</a></li>
+</ol>
+<h2>List of Projects</h2>
+      <ul class="projects">
+        <li ng-repeat="project in projects" class="">
+          <p><a href="#/project/{{project.projectId}}">{{project.title}}</a></p>
+        </li>
+      </ul>
+	  
+	  
+      <div class="add-new-content" id="add-project-content">
+		<h3>Add new Project</h3>
+        <form ng-submit="addProject(project_title, project_summary, project_date)">
+			<div class="form-group">
+				<label for="project_title">Project title</label><br/>
+				<input type="text" name="project_title" value="" id="project_title" ng-model="project_title">
+			</div>
+		<div class="form-group">
+		  	<label for="project_summary">Project Summary</label><br/>
+			<input type="text" name="project_summary" value="" id="project_summary" ng-model="project_summary">
+		</div>
+		<div class="form-group">
+		  <label for="project_date">Project Date</label><br/>
+		  <input type="text" name="project_date" value="" id="project_date" ng-model="project_date">
+		 </div>
+		 <div class="form-group">
+          <button type="submit" class="observation-submit">Create New Project</button>
+		  </div>
+        </form>
+      </div>

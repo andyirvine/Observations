@@ -1,0 +1,38 @@
+/* app css stylesheet */
+
+body {
+  padding-top: 10px;
+}
+
+.add-new-content{
+	border-top:1px solid #ccc;
+	margin-top:40px;
+}
+
+ul.sessions {
+	list-style-type :none;
+	margin:0;
+	padding: 0;
+}
+
+ul.sessions li {
+	border-bottom:1px solid #ccc;
+	padding: 10px 0;
+}
+
+#comments{
+	height :600px;
+	overflow-y: scroll;
+	border-top:1px solid #ccc;
+	padding:5px 0;
+}
+
+#observation-input{
+	width: 640px;
+	height: 140px;
+	border:1px solid #333;
+}
+
+#researchVid{
+	border:1px solid #333;
+}

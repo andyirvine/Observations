@@ -1,0 +1,26 @@
+<ol class="breadcrumb">
+	<li><a href="#/project/">Home</a></li>
+	<li> {{projDetails.title}}</li>
+</ol>
+<h2>Sessions in {{projDetails.title}} </h2>
+
+      <ul>
+        <li ng-repeat="session in sessions"
+            class="">
+          <p><a ng-href="#/project/{{projDetails.projectId}}/session/{{session.sessionID}}">{{session.title}}</a></p>
+        </li>
+      </ul>
+
+      <div class="add-new-content" id="add-observation-content">
+		  	  <h3>Add a new session</h3>
+        <form ng-submit="addSession(newSessionTitle, newSessionDate, newVideoId, newSessionSummary)">
+			<label> Session Title: </label><br/><input type="text" placeholder="Title" ng-model="newSessionTitle">
+			<br/>
+			<label> Session Date: </label><br/><input type="text" ng-model="newSessionDate"><br/>
+			<label> videoURL: </label><br/><input type="text" ng-model="newVideoId"><br/>
+			<label> Session Summary: </label><br/>
+			<textarea rows="3" placeholder="Summary" ng-model="newSessionSummary" /></textarea>
+		  <br/>
+          <button type="submit" class="observation-submit">Add Session</button>
+        </form>
+      </div>

@@ -1,0 +1,50 @@
+
+<ol class="breadcrumb">
+	<li><a href="#/overview">Home</a></li>
+	<li><a href="#/project/{{projectId}}">Project {{projectId}}</a></li>
+	<li> {{sessionInfo.title}}</li>
+</ol>
+
+<div class="row">
+	<div class="col-md-4">
+		<h3>{{sessionInfo.title}}</h3>
+		<h4>Comments</h4>
+		<div id="comments">
+		<ul class="sessions">
+			<li class="{{selected}}" ng-init="editState = 'Edit'" ng-repeat="comment in comments | orderBy:'time'">
+		          <p><span ng-hide="edit">{{comment.text}}</span><span ng-show="edit"><textarea class="hidden-input" type="text" ng-model="comment.text" ng-change="comments.$save(comment)"></textarea></span></p>
+		      <div class="observation-actions">
+				<button class="button button-play {{selected}}" ng-click="seekTo(comment.time); setSelected()" ng-click="">&#9654; Play - <em>{{comment.time | readableTime}}</em></button>
+		        <button class="observation-action button-link" ng-click="toggleEdit(this)" >{{editState}}</button>
+		        <button class="observation-action button-link" ng-click="removeComment(comment)">Delete</button>
+				
+		      </div>
+		          <div class="observation-timestamp">
+		            
+		          </div>
+			  </li>
+		</ul>
+		</div>
+		<!-- end of comments -->
+	</div>
+	<div class="col-md-8">
+		<p>Conducted on {{sessionInfo.date}} by : {{sessionInfo.userID}}</p>
+		<p>{{sessionInfo.summary}}</p>
+		<youtube-video video-id="researchVid" player="researchVidPlayer" ng-init="time='0'"></youtube-video>
+		<div class="add-observation-content">
+		        <!-- <label for="observation-input">Add observation at 00:00</label> -->
+				<div ng-show="!commentMode">
+					<p ng-show="!commentMode"><button ng-click="setMarker()" shortcut="{'ctrl+down': add}">Add Observation</button></p>
+				</div>
+				
+		        <form ng-submit="addComment(newMessageText)" ng-show="commentMode">
+					<p>Adding Observation at {{addObservationAt | readableTime}}</p>
+		          <textarea id="observation-input" rows="3" placeholder="Observation description" ng-model="newMessageText" /></textarea>
+				  <br/>
+		          <button type="submit" class="observation-submit">Create observation</button>
+				  <a ng-click="cancelAddObservation(this)">Cancel</a></form>
+		</div>
+
+	</div>
+
+

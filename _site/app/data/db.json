@@ -1,0 +1,54 @@
+{   
+  "projects" :{
+      "1" : {
+		  "id" : "000123",
+      "title" : "Inline Bank Explain",
+      "summary" : "This is the summary text in here - maybe a link to a google doc",
+      "date" : "26/09/14",
+      "sessions" : "1,2"
+    },
+    "2" : {
+		  "id" : "000124",
+    "title" : "Another Project in here",
+    "summary" : "This is the summary text in here - maybe a link to a google doc",
+    "date" : "26/09/14",
+    "sessions" : "1,2"
+  }
+  },
+  "sessions" :{
+      "1" : {
+      "title" : "Session Title (Who was in the session",
+      "summary" : "This is the summary text in here - maybe a link to a google doc",
+      "date" : "26/09/14",
+      "userID" : "0001"
+    },
+      "2" : {
+      "title" : "Session Title (Who was in the session",
+      "summary" : "This is the summary text in here - maybe a link to a google doc",
+      "date" : "26/09/14",
+      "userID" : "0001"
+    }
+  },
+  "comments" : {
+      "1" : {
+            "-JVHhanccIeeF4nHz7tN" : {
+              "text" : "Found it terrifying setting up as a sole trader",
+              "time" : 261.092329
+            },
+           "-JVHhanccIeeF4nHz7tDR" : {
+              "text" : "Found it terrifying setting up as a sole trader",
+              "time" : 26.223
+            }
+      },
+      "2" : {
+            "-XXXXXXXX" : {
+              "text" : "Found it terrifying setting up as a sole trader",
+              "time" : 261.092329
+            },
+           "-XXXXX0001" : {
+              "text" : "Found it terrifying setting up as a sole trader",
+              "time" : 26.223
+            }
+      }
+  }
+}

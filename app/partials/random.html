@@ -1,0 +1,9 @@
+
+<div id="random">
+	<ul class="random_sessions">
+		<li class="random_observation" ng-init="editState = 'Edit'" ng-repeat="comment in comments | orderBy:'random'">
+			<div class="color-code">&nbsp;</div>
+			<p><span ng-hide="edit">{{comment.text}}</span><span ng-show="edit"><textarea class="hidden-input" type="text" ng-model="comment.text" ng-change="comments.$save(comment)"></textarea></span></p>
+		</li>
+	</ul>
+</div>
